@@ -2,7 +2,7 @@
 Official implementation of paper "Knowledge Distillation from A Stronger Teacher" (DIST).  
 By Tao Huang, Shan You, Fei Wang, Chen Qian, Chang Xu.
 
-:fire: **DIST: state-of-the-art KD performance with an extremely simple implementation (simply replace the KLDivLoss in vanilla KD).**
+:fire: **DIST: state-of-the-art KD method with an extremely simple implementation (simply replace the KLDivLoss in vanilla KD).**
 
 ## Updates  
 Code is coming soon.
