@@ -1,5 +1,5 @@
 # Knowledge Distillation from A Stronger Teacher (DIST)  
-Official implementation of paper "Knowledge Distillation from A Stronger Teacher" (DIST).  
+Official implementation of paper "[Knowledge Distillation from A Stronger Teacher](https://arxiv.org/abs/2205.10536)" (DIST).  
 By Tao Huang, Shan You, Fei Wang, Chen Qian, Chang Xu.
 
 :fire: **DIST: state-of-the-art KD method with an extremely simple implementation (simply replace the KLDivLoss in vanilla KD).**
@@ -14,6 +14,8 @@ Code for ImageNet classification is available.
 git clone https://github.com/hunto/DIST_KD.git --recurse-submodules
 cd DIST_KD
 ```
+
+**The loss function of DIST is in** [classification/lib/models/losses/dist_kd.py](https://github.com/hunto/image_classification_sota/blob/main/lib/models/losses/dist_kd.py).
 
 * classification: prepare your environment and datasets following the `README.md` in `classification`.  
 * object detection: coming soon.
