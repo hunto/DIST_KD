@@ -34,7 +34,7 @@ sh tools/dist_train.sh 8 ${CONFIG} ${MODEL} --teacher-model ${T_MODEL} --experim
     |Student|Teacher|DIST|MODEL|T_MODEL|Log|
     |:--:|:--:|:--:|:--:|:--:|:--:|
     |ResNet-18 (69.76)|ResNet-34 (73.31)|72.07|`tv_resnet18`|`tv_resnet34`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/baseline_Res34-Res18.txt)|
-    |MobileNet V1 (70.13)|ResNet-50 (76.16)|73.24|`mobilenet`|`tv_resnet50`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/baseline_Res50-MBV1.txt)|
+    |MobileNet V1 (70.13)|ResNet-50 (76.16)|73.24|`mobilenet_v1`|`tv_resnet50`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/baseline_Res50-MBV1.txt)|
 
 
 * Stronger teachers (`R18` and `R34` students with various ResNet teachers):  
