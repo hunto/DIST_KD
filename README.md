@@ -69,17 +69,23 @@ sh tools/dist_train.sh 8 ${CONFIG} ${MODEL} --teacher-model ${T_MODEL} --experim
 
 
 ### COCO Detection  
+
+The training code is in [MasKD/mmrazor](https://github.com/hunto/MasKD/tree/main/mmrazor). An example to train `cascade_mask_rcnn_x101-fpn_r50`:  
+```shell
+sh tools/mmdet/dist_train_mmdet.sh configs/distill/dist/dist_cascade_mask_rcnn_x101-fpn_x50_coco.py 8 work_dirs/dist_cmr_x101-fpn_x50
+```
+
 |Student|Teacher|DIST|DIST+mimic|Config|Log|
 |:--:|:--:|:--:|:--:|:--:|:--:|
-|Faster RCNN-R50 (38.4)|Cascade Mask RCNN-X101 (45.6)|40.4|41.8|||
-|RetinaNet-R50 (37.4)|RetinaNet-X101 (41.0)|39.8|40.1|||
+|Faster RCNN-R50 (38.4)|Cascade Mask RCNN-X101 (45.6)|40.4|41.8|[[DIST]](https://github.com/hunto/MasKD/blob/main/mmrazor/configs/distill/dist/dist_cascade_mask_rcnn_x101-fpn_x50_coco.py) [[DIST+Mimic]](https://github.com/hunto/MasKD/blob/main/mmrazor/configs/distill/dist/dist+mimic_cascade_mask_rcnn_x101-fpn_x50_coco.py)|[[DIST]](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/det_DIST_fpn-r50_cascade-rcnn-x101.txt) [[DIST+Mimic]](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/det_DIST+mimic_fpn-r50_cascade-rcnn-x101.txt)|
+|RetinaNet-R50 (37.4)|RetinaNet-X101 (41.0)|39.8|40.1|[[DIST]](https://github.com/hunto/MasKD/blob/main/mmrazor/configs/distill/dist/dist_retinanet_x101-retinanet-r50_coco.py) [[DIST+Mimic]](https://github.com/hunto/MasKD/blob/main/mmrazor/configs/distill/dist/dist%2Bmimic_retinanet_x101-retinanet-r50_coco.py)|[[DIST]](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/det_DIST_retinanet-r50_retinanet-x101.txt) [[DIST+Mimic]](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/det_DIST+mimic_retinanet-r50_retinanet-x101.txt)|
 
 
 ### Cityscapes Segmentation  
 |Student|Teacher|DIST|Log|
 |:--:|:--:|:--:|:--:|
-|DeepLabV3-R18 (74.21)|DeepLabV3-R101 (78.07)|77.10|
-|PSPNet-R18 (72.55)|DeepLabV3-R101 (78.07)|76.31|
+|DeepLabV3-R18 (74.21)|DeepLabV3-R101 (78.07)|77.10|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/seg_DIST_deeplabv3_resnet101_resnet18_log.txtv)|
+|PSPNet-R18 (72.55)|DeepLabV3-R101 (78.07)|76.31|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/seg_DIST_psp_resnet101_resnet18_log.txt)|
 
 
 ## License  
