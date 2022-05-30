@@ -5,6 +5,9 @@ By Tao Huang, Shan You, Fei Wang, Chen Qian, Chang Xu.
 :fire: **DIST: state-of-the-art KD method with an extremely simple implementation (simply replace the KLDivLoss in vanilla KD).**
 
 ## Updates  
+### May 30, 2022  
+Code for object detection is available.
+
 ### May 27, 2022  
 Code for ImageNet classification is available.  
 
