@@ -97,10 +97,9 @@ This project is released under the [Apache 2.0 license](LICENSE).
 ## Citation  
 ```
 @article{huang2022knowledge,
-  title = {Knowledge Distillation from A Stronger Teacher},
-  author = {Huang, Tao and You, Shan and Wang, Fei and Qian, Chen and Xu, Chang},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  journal = {arXiv preprint arXiv:2205.10536},
-  year = {2022}
+  title={Knowledge Distillation from A Stronger Teacher},
+  author={Huang, Tao and You, Shan and Wang, Fei and Qian, Chen and Xu, Chang},
+  journal={arXiv preprint arXiv:2205.10536},
+  year={2022}
 }
 ```
