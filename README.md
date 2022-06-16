@@ -64,7 +64,7 @@ sh tools/dist_train.sh 8 ${CONFIG} ${MODEL} --teacher-model ${T_MODEL} --experim
     |ResNet-34 (76.8)|ResNet-50-SB (80.1)|77.2|77.8|`tv_resnet34`|`timm_resnet50`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/stronger_Res50SB-Res34.txt)|
     |MobileNet V2 (73.6)|ResNet-50-SB (80.1)|71.7|74.4|`tv_mobilenet_v2`|`timm_resnet50`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/stronger_Res50SB-MBV2.txt)|
     |EfficientNet-B0 (78.0)|ResNet-50-SB (80.1)|77.4|78.6|<details>`timm_tf_efficientnet_b0`|`timm_resnet50`</details>|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/stronger_Res50SB-EfficientNetB0.txt)|
-    |ResNet-50 (78.5)|Swin-L (86.3)|80.0|80.2|`tv_resnet50`|<details>`timm_swin_large_patch4_window7_224`</details>|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/stronger_SwinL-Res50.txt)|
+    |ResNet-50 (78.5)|Swin-L (86.3)|80.0|80.2|`tv_resnet50`|<details>`timm_swin_large_patch4_window7_224`</details>|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/stronger_SwinL-Res50.txt) [ckpt](https://drive.google.com/file/d/1iZFP53i4Yw7lqvfV707aTBddN_waEU1r/view?usp=sharing)|
     |Swin-T (81.3)|Swin-L (86.3)|81.5|82.3|-|-|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/stronger_SwinL-SwinT.txt)|
 
     * `Swin-L` student:
