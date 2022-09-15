@@ -1,10 +1,13 @@
 # Knowledge Distillation from A Stronger Teacher (DIST)  
-Official implementation of paper "[Knowledge Distillation from A Stronger Teacher](https://arxiv.org/abs/2205.10536)" (DIST).  
+Official implementation of paper "[Knowledge Distillation from A Stronger Teacher](https://arxiv.org/abs/2205.10536)" (DIST), NeurIPS 2022.  
 By Tao Huang, Shan You, Fei Wang, Chen Qian, Chang Xu.
 
 :fire: **DIST: state-of-the-art KD method with an extremely simple implementation (simply replace the KLDivLoss in vanilla KD).**
 
 ## Updates  
+### September 15, 2022   
+:fire: DIST was accepted by NeurIPS 2022!
+
 ### May 30, 2022  
 Code for object detection is available.
 
