@@ -2,11 +2,11 @@
 Official implementation of paper "[Knowledge Distillation from A Stronger Teacher](https://arxiv.org/abs/2205.10536)" (DIST), NeurIPS 2022.  
 By Tao Huang, Shan You, Fei Wang, Chen Qian, Chang Xu.
 
-:fire: **DIST: state-of-the-art KD method with an extremely simple implementation (simply replace the KLDivLoss in vanilla KD).**
+:fire: **DIST: a simple and effective KD method.**
 
 ## Updates  
 ### September 15, 2022   
-:fire: DIST was accepted by NeurIPS 2022!
+DIST was accepted by NeurIPS 2022!
 
 ### May 30, 2022  
 Code for object detection is available.
@@ -88,9 +88,10 @@ sh tools/mmdet/dist_train_mmdet.sh configs/distill/dist/dist_cascade_mask_rcnn_x
 
 
 ### Cityscapes Segmentation  
+Detailed instructions of reproducing our results are in `segmentation` folder ([README](./segmentation/README.md)).
 |Student|Teacher|DIST|Log|
 |:--:|:--:|:--:|:--:|
-|DeepLabV3-R18 (74.21)|DeepLabV3-R101 (78.07)|77.10|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/seg_DIST_deeplabv3_resnet101_resnet18_log.txtv)|
+|DeepLabV3-R18 (74.21)|DeepLabV3-R101 (78.07)|77.10|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/seg_DIST_deeplabv3_resnet101_resnet18_log.txt)|
 |PSPNet-R18 (72.55)|DeepLabV3-R101 (78.07)|76.31|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/seg_DIST_psp_resnet101_resnet18_log.txt)|
 
 

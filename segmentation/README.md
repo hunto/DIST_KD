@@ -30,8 +30,8 @@ Student models are trained on 8 * NVIDIA Tesla V100 GPUs.
 |Role|Network|Method|val mIoU|train script|log|ckpt|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |Teacher|DeepLabV3-ResNet101|-|78.07|[sh](./train_scripts/train_baseline/deeplabv3_res101.sh)|-|[Google Drive](https://drive.google.com/file/d/1zUdhYPYCDCclWU3Wo7GbbTlM8ibQ_UC1/view?usp=sharing)|
-|Student|DeepLabV3-ResNet18|DIST|77.10|[sh](./train_scripts/train_kd/deeplabv3_res18.sh)|||
-|Student|PSPNet-ResNet18|DIST|76.31|[sh](./train_scripts/train_kd/pspnet_res18.sh)|||
+|Student|DeepLabV3-ResNet18|DIST|77.10|[sh](./train_scripts/train_kd/deeplabv3_res18.sh)|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/seg_DIST_deeplabv3_resnet101_resnet18_log.txt)|[Google Drive](https://drive.google.com/file/d/1tqZ9W0t35PDlld81QpEusDjyGnj_kyKX/view?usp=sharing)|
+|Student|PSPNet-ResNet18|DIST|76.31|[sh](./train_scripts/train_kd/pspnet_res18.sh)|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.1/seg_DIST_psp_resnet101_resnet18_log.txt)|[Google Drive](https://drive.google.com/file/d/1U9xuOnjJg-RIRZfWBUylI-DdFhP44QdF/view?usp=sharing)|
 
 ## Evaluate pre-trained models on Cityscapes val and test sets
 
