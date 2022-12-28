@@ -5,14 +5,16 @@ By Tao Huang, Shan You, Fei Wang, Chen Qian, Chang Xu.
 :fire: **DIST: a simple and effective KD method.**
 
 ## Updates  
-### September 15, 2022   
-DIST was accepted by NeurIPS 2022!
 
-### May 30, 2022  
-Code for object detection is available.
+* **December 27, 2022**: Update CIFAR-100 distillation code and logs.
 
-### May 27, 2022  
-Code for ImageNet classification is available.  
+* **September 20, 2022**: Release code for semantic segmentation task.
+
+* **September 15, 2022**: DIST was accepted by NeurIPS 2022!
+
+* **May 30, 2022**: Code for object detection is available.
+
+* **May 27, 2022**: Code for ImageNet classification is available.  
 
 ## Getting started  
 ### Clone training code  
@@ -72,6 +74,31 @@ sh tools/dist_train.sh 8 ${CONFIG} ${MODEL} --teacher-model ${T_MODEL} --experim
 
     * `Swin-L` student:
     We implement our DIST on the official code of [Swin-Transformer](https://github.com/microsoft/Swin-Transformer).
+
+
+### CIFAR-100
+
+Download and extract the [teacher checkpoints](https://github.com/hunto/DIST_KD/releases/download/v0.0.2/cifar_ckpts.zip) to your disk, then specify the path of the corresponding checkpoint `pth` file using `--teacher-ckpt`:
+
+```
+cd classification
+sh tools/dist_train.sh 1 configs/strategies/distill/dist_cifar.yaml ${MODEL} --teacher-model ${T_MODEL} --experiment ${EXP_NAME} --teacher-ckpt ${CKPT}
+```
+
+**NOTE**: For `MobileNetV2`, `ShuffleNetV1`, and `ShuffleNetV2`, `lr` and `warmup-lr` should be `0.01`:
+```
+sh tools/dist_train.sh 1 configs/strategies/distill/dist_cifar.yaml ${MODEL} --teacher-model ${T_MODEL} --experiment ${EXP_NAME} --teacher-ckpt ${CKPT} --lr 0.01 --warmup-lr 0.01
+```
+
+|Student|Teacher|DIST|MODEL|T_MODEL|Log|
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|WRN-40-1 (71.98)|WRN-40-2 (75.61)|74.43±0.24|`cifar_wrn_40_1`|`cifar_wrn_40_2`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.2/log_cifar100_wrn_40_1-wrn_40_2.zip)|
+|ResNet-20 (69.06)|ResNet-56 (72.34)|71.75±0.30|`cifar_resnet20`|`cifar_resnet56`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.2/log_cifar100_res56-res20.zip)|
+|ResNet-8x4 (72.50)|ResNet-32x4 (79.42)|76.31±0.19|`cifar_resnet8x4`|`cifar_resnet32x4`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.2/log_cifar100_res32x4-res8x4.zip)|
+|MobileNetV2 (64.60)|ResNet-50 (79.34)|68.66±0.23|`cifar_mobile_half`|`cifar_ResNet50`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.2/log_cifar100_res50-mbv2.zip)|
+|ShuffleNetV1 (70.50)|ResNet-32x4 (79.42)|76.34±0.18|`cifar_ShuffleV1`|`cifar_resnet32x4`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.2/log_cifar100_res32x4-shufflev1.zip)|
+|ShuffleNetV2 (71.82)|ResNet-32x4 (79.42)|77.35±0.25|`cifar_ShuffleV2`|`cifar_resnet32x4`|[log](https://github.com/hunto/DIST_KD/releases/download/v0.0.2/log_cifar100_res32x4-shufflev2.zip)|
+
 
 
 ### COCO Detection  
